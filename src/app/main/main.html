@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card">
+    <img [src]="URL" />
+    <div class="text">
+      <h1>{{ title }}</h1>
+
+      <div class="container2">
+        <span class="year"> გამოშვების თარიღი: {{ year }}</span
+        >
+        <span class="rating">რეიტინგი: {{ rating }}</span
+        >
+        <span class="genre">{{ genre }}</span>
+      </div>
+      <p class="description">{{ description }}</p>
+    </div>
+
+    <div class="links">
+      <button (click)="showMessage()">ფილმი</button>
+      <a [href]="officialSite" target="_blank">ოფიციალური ვებსაიტი</a>
+    </div>
+
+    <label for="change">შეცვალე ფილმის სახელი: </label>
+    <input type="text" id="change" [(ngModel)]="title" [placeholder]="'ფილმის სახელი'" />
+  </div>
+</div>
